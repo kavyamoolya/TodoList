@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your To-Do List</title>
+
+    <!-- Link Font Awesome library for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- This is the link to Google Fonts for custom fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@500&family=Caveat&family=Dancing+Script&family=Indie+Flower&family=Pacifico&family=Potta+One&family=Roboto&family=Satisfy&display=swap"
+        rel="stylesheet"><!-- I have used only one for now, but have kept others too, in case I want to change. -->
+
+    <!-- Link to my external CSS file -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <main>
+
+        <div class="container">
+            <!-- Heading for the to-do list title. I have aligned it to center here itself  -->
+            <h1>
+                <center>My To-Do list</center>
+            </h1>
+            <div class="input-div">
+                <input id="input-field" type="text" placeholder="Add a new task"> <!-- Input field for adding tasks -->
+                <button id="add-btn">Add</button> <!-- Button to add a task -->
+            </div>
+            <div class="output-div">
+                <!-- Display the number of pending tasks -->
+                <p id="pending-tasks">
+
+                    You have <span class="count-value">0</span> task(s) to complete.
+
+                </p>
+                <!-- List to display the tasks -->
+                <ul id="todos-list">
+
+                </ul>
+            </div>
+        </div>
+    </main>
+     <!-- Link to my external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,154 @@
+/* Apply box-sizing: border-box to all elements */
+* {
+    box-sizing: border-box;
+}
+
+/* Define custom fonts using CSS variables */
+:root {
+    --font1: 'Potta One', cursive; /* Used extensively especially for headings and buttons */
+    --font2: 'Potta One', cursive; /* Used in search window bar and the list items */
+}
+
+/* Style for the main container */
+main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(254, 231, 199);
+}
+
+/* Style for the main content container */
+.container {
+    height: 90%; /* Set maximum height to 90% of viewport height */
+    width: 90%; /* Set maximum width to 90% of viewport width */
+    background-color: lightgoldenrodyellow;
+    border-radius: 12px;
+    border: 5px solid brown;
+    overflow: auto; /* Enable scrolling when content overflows. 
+    It was hidden initially and the scrolling part was only in outer-div, but if the list got too long, 
+    then the below elements were not visible, so set the overflow to auto here */
+    padding: 0.5rem;
+}
+
+/* Style for heading and paragraph inside the container */
+.container h1, p {
+    justify-items: center;
+    color: brown;
+    font-weight: bold;
+    font-family: var(--font1);
+}
+
+/* Style for the input section */
+.input-div {
+    height: 2.5rem;
+}
+
+/* Style for the input field */
+.input-div > input {
+    height: 100%;
+    width: 75%;
+    font-size: 1.5rem;
+    line-height: 1.2rem;
+    font-family: var(--font2);
+    color: brown;
+    border: 3px solid brown;
+    border-radius: 5px;
+}
+
+/* Style for the add button */
+.input-div > button {
+    height: 100%;
+    font-size: 1.5rem;
+    width: 23%;
+    cursor: pointer;
+    font-family: var(--font1);
+    font-weight: bolder;
+    color: brown;
+    border: 3px solid brown;
+    border-radius: 5px;
+    background-color: rgb(253, 223, 180);
+}
+
+/* Style for the output section */
+.output-div {
+    height: calc(100% - 3rem); /* Calculate the height to fill remaining space */
+    font-size: 1.2rem;
+    font-family: var(--font2);
+    background-color: lightgoldenrodyellow;
+    overflow: scroll; /* Enable scrolling when content overflows */
+}
+
+/* Style for the unordered list */
+#todos-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Style for list items */
+#todos-list li {
+    padding: 0.5rem;
+    position: relative;
+    border-radius: 10px;
+    background-color: rgb(253, 223, 180);
+}
+
+/* Style for even-numbered list items */
+#todos-list li:nth-child(even) {
+    background-color: rgb(255, 212, 155);
+}
+
+/* Style for list items except the first one, since there is space above the first list item is adequate.  */
+#todos-list li:not(:first-child) {
+    margin-top: 0.5rem;
+}
+
+/* Style for list items on hover */
+#todos-list li:hover {
+    cursor: pointer;
+    background-color: rgb(249, 173, 74);
+}
+
+/* Style for the close button on the list items */
+.close-btn {
+    position: absolute;
+    right: 2rem;
+    cursor: pointer;
+    color: brown;
+}
+
+/* Style for the close button on hover */
+.close-btn:hover {
+    color: black;
+}
+
+/* Style the custom checkbox container */
+#todos-list li input[type="checkbox"] {
+    /* Hide the default checkbox */
+    appearance: none;
+    width: 12px; 
+    height: 12px; 
+    border: 2px solid brown; 
+    border-radius: 3px; 
+    padding-right: 3px; /* Add space between checkbox and text */
+    cursor: pointer;
+}
+
+/* Style the custom checkbox label text */
+#todos-list li .custom-checkbox-label {
+    cursor: pointer;
+    padding-left: 10px !important; /* Add space between checkbox and text */
+}
+
+/* Style the custom checkbox when checked */
+#todos-list li input[type="checkbox"]:checked {
+    background-color: brown; /* Change the background color when checked */
+}
+
+/* Style for completed tasks */
+.completed {
+    text-decoration: line-through;
+    color: red;
+}
